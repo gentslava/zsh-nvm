@@ -24,6 +24,8 @@ _1st_arguments=(
   'reinstall-packages:reinstall global `npm` packages contained in <version> to current version'
   'unload:unload `nvm` from shell'
   'which:display path to installed node version. Uses .nvmrc if available'
+  'upgrade:Upgrade to the latest release of `nvm`'
+  'revert:Revert back to the previously installed version'
 )
 
 _arguments -C '*:: :->subcmds' && return 0
