@@ -120,12 +120,12 @@ _zsh_nvm_lazy_load() {
   for cmd in $cmds; do
 
     # When called, unset all lazy loaders, load nvm then run current command
-    eval "$cmd(){
+    eval '$cmd(){
       unset -f $cmds > /dev/null 2>&1
       _zsh_nvm_load
       [[ "$NVM_AUTO_USE" == true ]] && _zsh_nvm_auto_use
       $cmd \"\$@\"
-    }"
+    }'
   done
 }
 
